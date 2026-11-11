@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Sahil Chand Rajwar | Cybersecurity Student &amp; Vibe Coder</title>
+  <meta name="description" content="Portfolio of Sahil Chand Rajwar, a B.Tech Cyber Security student building practical cybersecurity and AI projects." />
+  <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, network security, portfolio" />
+  <meta name="author" content="Sahil Chand Rajwar" />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sahil Chand Rajwar | Cybersecurity Student &amp; Vibe Coder" />
+  <meta property="og:description" content="Cybersecurity, detection engineering, AI tools, and practical projects by Sahil Chand Rajwar." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sahil Chand Rajwar | Cybersecurity Student &amp; Vibe Coder" />
+  <meta name="twitter:description" content="Cybersecurity, detection engineering, AI tools, and practical projects by Sahil Chand Rajwar." />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <noscript>
+    <style>.preloader{display:none!important}</style>
+  </noscript>
+</head>
+
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading portfolio">
+    <div class="preloader__inner">
+      <p class="preloader__title">PORTFOLIO<span>://</span>SECURE-BOOT</p>
+      <div class="preloader__lines" id="preloaderLines" aria-hidden="true"></div>
+      <div class="preloader__progress"><div class="preloader__bar" id="preloaderBar"></div></div>
+      <p class="preloader__percent"><span id="preloaderPercent">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- ===================== GLOBAL DECOR ===================== -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner" aria-label="Primary">
+      <a href="#home" class="brand">
+        <span class="logo-mark" data-bind="initials">S</span>
+        <span class="brand__name" data-bind="name">Sahil</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#certifications">Certifications</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#terminal">Terminal</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero__glow hero__glow--a" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="container hero__layout">
+        <div class="hero__content">
+          <span class="badge hero-anim" style="--d:0">
+            <span class="badge__dot" aria-hidden="true"></span>
+            <span data-bind="status">AVAILABLE FOR OPPORTUNITIES</span>
+          </span>
+
+          <p class="hero__greeting hero-anim" style="--d:1" data-bind="hero.greeting">Hi, I'm Sahil.</p>
+
+          <h1 class="hero__title" id="heroHeading">SECURING THE DIGITAL WORLD</h1>
+
+          <p class="hero__roles hero-anim" style="--d:3">
+            <span class="prompt-char" aria-hidden="true">&gt;_</span>
+            <span id="typedRole">Cybersecurity Student</span>
+            <span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__desc hero-anim" style="--d:4" data-bind="hero.description"></p>
+
+          <div class="hero__ctas hero-anim" style="--d:5">
+            <a class="btn btn--primary" href="#projects">
+              <span data-bind="hero.primaryCtaLabel">Explore My Work</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              <span data-bind="hero.secondaryCtaLabel">Let's Connect</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual hero-anim" style="--d:3" data-parallax="0.06">
+          <svg class="hero-figure" viewBox="0 0 600 600" role="img" aria-label="Abstract illustration of a hooded security engineer with a glowing red visor">
+            <defs>
+              <radialGradient id="aura" cx="50%" cy="45%" r="50%">
+                <stop offset="0%" stop-color="#E50920" stop-opacity=".5"/>
+                <stop offset="55%" stop-color="#E50920" stop-opacity=".08"/>
+                <stop offset="100%" stop-color="#E50920" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#202020"/>
+                <stop offset="100%" stop-color="#040404"/>
+              </linearGradient>
+              <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FF263D"/>
+                <stop offset="100%" stop-color="#E50920" stop-opacity=".15"/>
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <circle cx="300" cy="300" r="290" fill="url(#aura)"/>
+
+            <g class="svg-ring svg-ring--a" fill="none" stroke="#E50920" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 12">
+              <circle cx="300" cy="300" r="256"/>
+            </g>
+            <g class="svg-ring svg-ring--b" fill="none">
+              <circle cx="300" cy="300" r="210" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+              <circle cx="300" cy="300" r="210" stroke="#FF263D" stroke-width="2" stroke-dasharray="110 1000" stroke-linecap="round" filter="url(#glow)"/>
+            </g>
+
+            <g fill="none" stroke="rgba(255,38,61,.55)" stroke-width="1.5">
+              <path d="M168 230H72v110H30"/>
+              <path d="M432 230h96v110h42"/>
+              <path d="M170 470H96v-60"/>
+              <path d="M430 470h74v-60"/>
+            </g>
+            <circle cx="30" cy="340" r="5" fill="#FF263D" filter="url(#glow)"/>
+            <circle cx="570" cy="340" r="5" fill="#FF263D" filter="url(#glow)"/>
+            <circle cx="96" cy="410" r="4" fill="#FF263D"/>
+            <circle cx="504" cy="410" r="4" fill="#FF263D"/>
+
+            <path d="M300 120c-76 0-120 56-120 136v56c0 26-16 46-40 66v102h320V378c-24-20-40-40-40-66v-56c0-80-44-136-120-136z"
+                  fill="url(#bodyGrad)" stroke="url(#rimGrad)" stroke-width="2"/>
+            <path d="M232 268c36-46 100-46 136 0l-12 56c-40-26-72-26-112 0z" fill="#020202"/>
+            <path class="visor" d="M236 282h128" stroke="#FF263D" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+
+            <path d="M300 372v44M276 392h-34v30M324 392h34v30" stroke="#E50920" stroke-width="2" fill="none" filter="url(#glow)"/>
+            <circle class="pulse-node" cx="300" cy="386" r="8" fill="#FF263D" filter="url(#glow)"/>
+            <path d="M150 430l-14 40h328l-14-40" fill="none" stroke="#E50920" stroke-width="2" opacity=".6"/>
+            <path d="M168 300v-18M432 300v-18" stroke="#E50920" stroke-width="2" opacity=".5"/>
+          </svg>
+
+          <div class="float-cards" id="heroFloatCards"></div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <span class="scroll-cue__mouse"><span></span></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===================== 01 ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about">
+          <figure class="profile reveal">
+            <div class="profile__frame">
+              <div class="media-fallback"><span data-bind="initials">S</span></div>
+              <img id="profileImg" data-media alt="" width="800" height="1000" loading="lazy" decoding="async" />
+              <figcaption class="profile__tag">
+                <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                <span data-bind="title">Cybersecurity Student</span>
+              </figcaption>
+            </div>
+          </figure>
+
+          <div class="about__content">
+            <header class="section-head reveal">
+              <p class="eyebrow">01 — About Me</p>
+              <h2 class="section-title">Attacker's curiosity.<br /><span>Defender's discipline.</span></h2>
+            </header>
+
+            <p class="lead reveal" data-bind="about.lead"></p>
+            <div class="prose reveal" id="aboutBio"></div>
+
+            <div class="info-grid">
+              <article class="info-card info-card--wide reveal spotlight">
+                <h3><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+                <ul class="edu-list" id="educationList"></ul>
+              </article>
+              <article class="info-card reveal spotlight">
+                <h3><i class="fa-solid fa-crosshairs" aria-hidden="true"></i> Cybersecurity Interests</h3>
+                <ul class="chip-list" id="interestList"></ul>
+              </article>
+              <article class="info-card reveal spotlight">
+                <h3><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i> Career Goals</h3>
+                <ul class="goal-list" id="goalsList"></ul>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 SKILLS ===================== -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 — Skills</p>
+          <h2 class="section-title">Tools of the <span>trade</span></h2>
+          <p class="section-sub">Grouped by discipline. Proficiency bars appear only where a level is set in <code>js/data.js</code>.</p>
+        </header>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">03 — Projects</p>
+          <h2 class="section-title">Selected <span>work</span></h2>
+          <p class="section-sub">Hands-on builds in cryptography, detection, and offensive/defensive security.</p>
+        </header>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 CERTIFICATIONS ===================== -->
+    <section id="certifications" class="section section--alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 — Certifications &amp; Achievements</p>
+          <h2 class="section-title">Verified <span>progress</span></h2>
+          <p class="section-sub">Each entry links to its certificate or verification page when one is provided.</p>
+        </header>
+        <aside class="thm-profile-card reveal" aria-label="TryHackMe profile">
+          <div>
+            <p class="eyebrow">TRYHACKME</p>
+            <h3>Learning in progress</h3>
+            <p>Open my profile to see my latest rooms, badges, and learning activity.</p>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="https://tryhackme.com/p/sahilchand05" target="_blank" rel="noopener noreferrer">
+            View TryHackMe profile <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </aside>
+        <div class="filters" id="certFilters" role="group" aria-label="Filter certificates by category"></div>
+        <div class="cert-grid" id="certGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">05 — Learning Journey</p>
+          <h2 class="section-title">Education, labs &amp; <span>milestones</span></h2>
+        </header>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- ===================== 06 TERMINAL ===================== -->
+    <section id="terminal" class="section section--alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">06 — Terminal</p>
+          <h2 class="section-title">Live <span>shell</span></h2>
+          <p class="section-sub">A read-only, Kali-style terminal. Type <code>help</code> to explore. Everything runs locally in your browser.</p>
+        </header>
+
+        <div class="terminal reveal">
+          <div class="terminal__bar">
+            <span class="dot dot--red" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="terminal__title">sahil@portfolio: ~</span>
+          </div>
+
+          <div class="terminal__body" id="termBody">
+            <div id="termOutput" class="term-output"></div>
+
+            <div class="term-prompt">
+              <div class="term-prompt__top" id="termPromptTop"></div>
+              <form class="term-prompt__row" id="termForm" autocomplete="off">
+                <label class="term-prompt__bottom" for="termInput">└─$</label>
+                <input id="termInput" type="text" spellcheck="false" autocapitalize="off" autocorrect="off"
+                       aria-label="Terminal input. Type help for a list of commands." />
+              </form>
+            </div>
+          </div>
+
+          <div class="term-quick" id="termQuick" aria-label="Quick commands"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 CONTACT ===================== -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div class="contact__intro reveal">
+          <p class="eyebrow">07 — Contact</p>
+          <h2 class="section-title">Let's build something <span>secure</span></h2>
+          <p class="lead" data-bind="contact.message"></p>
+          <ul class="contact-list" id="contactList"></ul>
+        </div>
+
+        <form class="contact-form glass glow-border reveal" id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fName">Name</label>
+              <input id="fName" name="name" type="text" autocomplete="name" maxlength="60" required aria-describedby="err-name" />
+              <p class="field__error" id="err-name" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="fEmail">Email</label>
+              <input id="fEmail" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="err-email" />
+              <p class="field__error" id="err-email" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="fSubject">Subject</label>
+              <input id="fSubject" name="subject" type="text" maxlength="120" required aria-describedby="err-subject" />
+              <p class="field__error" id="err-subject" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="fMessage">Message</label>
+              <textarea id="fMessage" name="message" rows="6" maxlength="1500" required aria-describedby="err-message"></textarea>
+              <p class="field__error" id="err-message" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <!-- Honeypot: hidden from people, often filled by spam bots -->
+          <input class="hp" type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <button class="btn btn--primary btn--block btn--glow" type="submit" id="submitBtn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status"></p>
+          <p class="form-note">
+            Without a backend, this form opens your email app with the message pre-filled.
+            To deliver messages straight to your inbox, set <code>contact.formEndpoint</code> in
+            <code>js/data.js</code> (see README, section 7).
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <a href="#home" class="brand">
+          <span class="logo-mark" data-bind="initials">S</span>
+          <span class="brand__name" data-bind="name">Sahil</span>
+        </a>
+
+        <nav aria-label="Footer navigation">
+          <ul class="footer__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__social" id="footerSocial"></div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="year"></span> <span data-bind="name">Sahil</span>. Built with HTML, CSS &amp; Vanilla JavaScript.</p>
+        <a class="btn btn--ghost btn--sm" href="#home">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: data first, then rendering, then effects, then terminal -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
+
