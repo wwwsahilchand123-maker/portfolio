@@ -1,0 +1,195 @@
+/* ==========================================================================
+   animations.css: keyframes, scroll reveal states, glow effects, cursor.
+   Tune speeds here. Reduced-motion users get a near-static experience.
+   ========================================================================== */
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial: 0deg;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(229, 9, 32, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(229, 9, 32, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 9, 32, 0); }
+}
+@keyframes pulse-node {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+@keyframes scroll-dot {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
+}
+@keyframes spin-angle {
+  to { --angle: 360deg; }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* SVG hero rings & visor */
+.svg-ring { transform-origin: 300px 300px; animation: orbit 40s linear infinite; }
+.svg-ring--b { animation-duration: 26s; animation-direction: reverse; }
+.visor { animation: visor-flicker 3.5s ease-in-out infinite; }
+.pulse-node { transform-box: fill-box; transform-origin: center; animation: pulse-node 2.4s ease-in-out infinite; }
+@keyframes visor-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+/* ---------- Scroll reveal ---------- */
+/* Uses the individual `translate` property so it never fights with hover transforms. */
+.js .reveal {
+  opacity: 0;
+  translate: 0 36px;
+  transition: opacity 0.9s var(--ease), translate 0.9s var(--ease);
+  transition-delay: var(--delay, 0ms);
+}
+.js .reveal.is-visible { opacity: 1; translate: 0 0; }
+
+/* ---------- Hero entrance ---------- */
+.js .hero-anim {
+  opacity: 0;
+  translate: 0 24px;
+  transition: opacity 0.9s var(--ease), translate 0.9s var(--ease);
+  transition-delay: calc(var(--d, 0) * 120ms + 150ms);
+}
+.is-loaded .hero-anim { opacity: 1; translate: 0 0; }
+
+/* Word-by-word text reveal for the hero heading */
+.js .word > span {
+  transform: translateY(110%);
+  transition: transform 1s var(--ease);
+  transition-delay: calc(var(--i, 0) * 90ms + 250ms);
+}
+.is-loaded .word > span { transform: none; }
+
+/* ---------- Preloader ---------- */
+.preloader__line { animation: fade-in 0.3s var(--ease) both; }
+
+/* Particles fade in after load */
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.is-loaded #particles { opacity: 0.85; }
+
+/* Hero scroll cue shares keyframes above */
+
+/* ---------- Glowing animated border (used on the contact form) ---------- */
+.glow-border { position: relative; isolation: isolate; }
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--angle), transparent 0 70%, var(--accent) 80%, var(--accent-2) 88%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin-angle 6s linear infinite;
+  pointer-events: none;
+}
+
+/* ---------- Custom cursor (desktop with a fine pointer only) ---------- */
+.cursor-dot,
+.cursor-ring {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--accent-2);
+  box-shadow: 0 0 12px var(--accent);
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid rgba(255, 38, 61, 0.6);
+  transition: width 0.3s, height 0.3s, margin 0.3s, background 0.3s, border-color 0.3s;
+}
+.cursor-ring.is-hover {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  background: rgba(229, 9, 32, 0.12);
+  border-color: var(--accent-2);
+}
+@media (pointer: fine) {
+  .has-custom-cursor .cursor-dot,
+  .has-custom-cursor .cursor-ring { display: block; }
+  .has-custom-cursor,
+  .has-custom-cursor a,
+  .has-custom-cursor button { cursor: none; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal,
+  .js .hero-anim {
+    opacity: 1;
+    translate: none;
+  }
+  .js .word > span { transform: none; }
+  #particles { display: none; }
+  .cursor-dot, .cursor-ring { display: none !important; }
+}
+.cursor-dot,
+.cursor-ring {
+  pointer-events: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
