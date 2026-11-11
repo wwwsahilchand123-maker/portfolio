@@ -861,6 +861,7 @@ img.is-missing { display: none; }
   overflow: hidden;
   background: var(--bg-tertiary);
 }
+.project-card__media > .media-fallback { display: none !important; }
 .project-card__media img {
   width: 100%;
   height: 100%;
