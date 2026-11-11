@@ -33,7 +33,7 @@ assets/
   icons/             favicon or other icons
 ```
 
-The asset folders are included for your real profile photo, project images, certificates, and icons. No personal images or certificates were included with the supplied source. Missing optional images use the site fallback.
+The asset folders contain the favicon and an original red/black vector artwork sprite sheet for the seven project cards. The project artwork is illustrative, not a screenshot of a running application. Add real app screenshots when you have them. The two Internshala training records are listed in the Certifications section with their certificate numbers and verification portal links; the original PDF files are not currently hosted in the public repository.
 
 ---
 
@@ -200,7 +200,7 @@ On load, the browser console lists every value in `js/data.js` that still contai
 | Image | Path | Recommended size | Notes |
 |---|---|---|---|
 | Profile photo | `assets/images/profile.jpg` | 800 × 1000 px, under 200 KB | Square or portrait crop works |
-| Project thumbnails | `assets/projects/<name>.jpg` | 1600 × 1000 px (16:10), under 250 KB | Set the path in `thumbnail` |
+| Project artwork | `assets/projects/project-montage.svg` | Vector sprite sheet | Each project uses the shared artwork file plus a `spriteIndex` (0–6) in `js/data.js`. These are illustrative visuals, not application screenshots. |
 | Certificate images | `assets/certificates/<name>.jpg` | 1600 px wide, under 300 KB | Optional; set `image` |
 
 - Optimize images before uploading (for example with Squoosh or a similar tool). JPG or WebP both work.
