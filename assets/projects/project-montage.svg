@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500" role="img" aria-labelledby="title desc">
+<title id="title">Cybersecurity and technology project artwork</title>
+<desc id="desc">Seven original red and black vector illustrations for network intrusion detection, security orchestration, AI assistant, cyber learning, packaging intelligence, AES encryption, and weather analytics projects.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#26080d"/><stop offset=".55" stop-color="#111"/><stop offset="1" stop-color="#050505"/></linearGradient>
+ <linearGradient id="red" x2="1" y2="1"><stop stop-color="#ff4055"/><stop offset="1" stop-color="#a90019"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#f20b2b" stop-opacity=".35"/><stop offset="1" stop-color="#f20b2b" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#ff3048" stroke-opacity=".11" stroke-width="1"/></pattern>
+ <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+</defs>
+<g id="p0" transform="translate(0 0)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="126" r="130" fill="url(#glow)"/>
+ <g fill="none" stroke="#ff3048" stroke-opacity=".7"><circle cx="205" cy="126" r="93"/><circle cx="205" cy="126" r="66" stroke-dasharray="4 8"/><path d="M205 25V48M205 204v22M102 126h23M285 126h23"/></g>
+ <path d="M205 69l45 18v43c0 33-22 51-45 64-23-13-45-31-45-64V87z" fill="#1a0b0e" stroke="url(#red)" stroke-width="5"/>
+ <path d="M205 88v88c17-11 29-26 29-48V98z" fill="url(#red)"/><rect x="192" y="117" width="26" height="24" rx="5" fill="none" stroke="#fff" stroke-width="3"/><path d="M198 117v-8a7 7 0 0114 0v8" fill="none" stroke="#fff" stroke-width="3"/>
+ <g fill="#ff3048"><circle cx="70" cy="60" r="5"/><circle cx="337" cy="58" r="5"/><circle cx="80" cy="190" r="5"/><circle cx="330" cy="190" r="5"/></g>
+ <g stroke="#ff3048" stroke-width="2" fill="none"><path d="M70 60l42 26 31 0M337 58l-44 26-28 0M80 190l45-22M330 190l-44-22"/></g>
+ <text x="24" y="226" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">NETWORK DEFENSE / IDS</text>
+</g>
+<g id="p1" transform="translate(400 0)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="200" cy="120" r="135" fill="url(#glow)"/>
+ <g fill="#150c0e" stroke="#ff3048" stroke-width="3"><rect x="28" y="88" width="76" height="58" rx="9"/><rect x="160" y="32" width="80" height="58" rx="9"/><rect x="292" y="88" width="78" height="58" rx="9"/><rect x="160" y="162" width="80" height="54" rx="9"/></g>
+ <g fill="none" stroke="#ff5267" stroke-width="3"><path d="M104 117h56M240 61h35v56h17M200 90v72M240 189h52v-72"/><path d="M191 117l9 9 9-9"/></g>
+ <circle cx="200" cy="119" r="26" fill="#24080d" stroke="url(#red)" stroke-width="4"/><path d="M200 101v36M182 119h36" stroke="#fff" stroke-width="3"/>
+ <path d="M53 111h25M53 122h35M53 133h19M315 108h31M315 120h31M315 132h22" stroke="#ff7a88" stroke-width="3"/>
+ <path d="M180 178l20-9 20 9v17c0 13-10 21-20 26-10-5-20-13-20-26z" fill="#e50920"/><path d="M190 192l7 7 14-15" fill="none" stroke="#fff" stroke-width="3"/>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">SECURITY AUTOMATION / SOAR</text>
+</g>
+<g id="p2" transform="translate(800 0)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="112" r="140" fill="url(#glow)"/>
+ <ellipse cx="205" cy="203" rx="116" ry="17" fill="none" stroke="#ff3048" stroke-width="2"/><ellipse cx="205" cy="203" rx="84" ry="10" fill="none" stroke="#ff3048" stroke-opacity=".6"/>
+ <path d="M205 42c-47 0-75 34-75 80v24c-18 13-25 28-25 49h200c0-21-7-36-25-49v-24c0-46-28-80-75-80z" fill="#121316" stroke="url(#red)" stroke-width="4"/>
+ <path d="M152 122q53-34 106 0v20q-53-26-106 0z" fill="#050505" stroke="#ff3048" stroke-width="2"/><path d="M166 129h78" stroke="#ff263d" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="205" cy="172" r="8" fill="#ff263d"/><path d="M205 180v18M185 190h40" stroke="#ff263d" stroke-width="2"/>
+ <g fill="none" stroke="#ff3048" stroke-opacity=".7"><circle cx="205" cy="118" r="112" stroke-dasharray="3 9"/><path d="M85 89l35 20M325 89l-35 20"/></g>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">NEXA AI / AGENT SYSTEM</text>
+</g>
+<g id="p3" transform="translate(1200 0)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="120" r="130" fill="url(#glow)"/>
+ <rect x="68" y="42" width="264" height="158" rx="10" fill="#0b0d10" stroke="#ff3048" stroke-width="3"/><rect x="82" y="57" width="236" height="126" rx="5" fill="#170b0e" stroke="#69202a"/>
+ <rect x="100" y="77" width="120" height="84" rx="5" fill="#100d10" stroke="#a82236"/><path d="M116 142l20-25 18 12 25-32 22 18" fill="none" stroke="#ff5366" stroke-width="4"/>
+ <g fill="#ff5366"><circle cx="136" cy="117" r="4"/><circle cx="154" cy="129" r="4"/><circle cx="179" cy="97" r="4"/></g>
+ <path d="M244 82h54M244 101h54M244 120h54" stroke="#ff5366" stroke-width="5" stroke-linecap="round"/><path d="M244 143h14l8 8 16-19" fill="none" stroke="#ff5366" stroke-width="3"/>
+ <path d="M190 200h20l12 13h-44z" fill="#5c1722"/><circle cx="205" cy="119" r="97" fill="none" stroke="#ff3048" stroke-opacity=".25" stroke-dasharray="5 10"/>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">SECURELEARN / CYBER LAB</text>
+</g>
+<g id="p4" transform="translate(0 250)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="118" r="130" fill="url(#glow)"/>
+ <path d="M105 77l98-35 94 35-96 36z" fill="#d8c2a2" stroke="#ffb36b" stroke-width="2"/><path d="M105 77v92l96 39v-95z" fill="#8a5839" stroke="#d38a4d" stroke-width="2"/><path d="M201 113l96-36v92l-96 39z" fill="#59301f" stroke="#d38a4d" stroke-width="2"/>
+ <path d="M136 83l65-23 63 24-64 25z" fill="#f0d4ac" opacity=".85"/><path d="M142 103v49l52 21v-49z" fill="#b56e40"/><path d="M207 125l67-25v48l-67 25z" fill="#7c4029"/>
+ <g fill="none" stroke="#ff5366" stroke-width="3"><path d="M300 57l22 9v21c0 17-11 26-22 32-11-6-22-15-22-32V66z"/><path d="M288 83l8 8 16-19"/></g>
+ <path d="M124 190l-15 18M290 187l15 20" stroke="#76bd65" stroke-width="5" stroke-linecap="round"/>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">PACKINTEL / MATERIAL AI</text>
+</g>
+<g id="p5" transform="translate(400 250)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="120" r="130" fill="url(#glow)"/>
+ <circle cx="205" cy="120" r="91" fill="#101115" stroke="#8d2636" stroke-width="8"/><circle cx="205" cy="120" r="72" fill="#08090c" stroke="#ff3048" stroke-width="3"/>
+ <circle cx="205" cy="120" r="45" fill="#16090d" stroke="#ff5366" stroke-width="2"/><rect x="181" y="103" width="48" height="38" rx="7" fill="url(#red)"/>
+ <path d="M190 103v-12a15 15 0 0130 0v12" fill="none" stroke="#fff" stroke-width="6"/><circle cx="205" cy="122" r="4" fill="#fff"/>
+ <g stroke="#ff5366" stroke-width="4"><path d="M205 20v20M205 200v20M105 120h20M285 120h20M135 50l14 14M261 176l14 14M275 50l-14 14M149 176l-14 14"/></g>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">AES-256 / ENCRYPTED VAULT</text>
+</g>
+<g id="p6" transform="translate(800 250)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="120" r="130" fill="url(#glow)"/>
+ <circle cx="205" cy="119" r="88" fill="none" stroke="#ff3048" stroke-opacity=".55" stroke-width="2"/><circle cx="205" cy="119" r="65" fill="none" stroke="#ff3048" stroke-opacity=".4" stroke-dasharray="4 8"/>
+ <path d="M145 125c-23 0-34-16-26-34 7-16 25-20 39-11 7-24 39-33 57-17 12-13 37-9 43 10 26-1 41 22 29 42-5 8-14 10-25 10z" fill="#1a2029" stroke="#a7b1c1" stroke-width="3"/>
+ <path d="M181 137l-12 24M208 139l-12 27M236 137l-12 24" stroke="#ff5366" stroke-width="4" stroke-linecap="round"/>
+ <circle cx="295" cy="66" r="25" fill="#ffb84d" opacity=".9"/><path d="M295 27v-12M295 117v-12M256 66h-12M346 66h-12" stroke="#ffb84d" stroke-width="3"/>
+ <path d="M64 183h270" stroke="#ff3048" stroke-opacity=".5" stroke-width="2"/><path d="M84 183l30-15 28 8 30-36 26 13 35-50 27 18" fill="none" stroke="#ff5366" stroke-width="3"/>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">WEATHERNOVA / LIVE DATA</text>
+</g>
+<g id="p7" transform="translate(1200 250)">
+ <rect width="400" height="250" fill="url(#bg)"/><rect width="400" height="250" fill="url(#grid)"/><circle cx="205" cy="120" r="130" fill="url(#glow)"/>
+ <path d="M55 170c70-90 140-90 210-20s100 40 125-10" fill="none" stroke="#ff3048" stroke-width="3" opacity=".8"/><path d="M55 190c70-90 140-90 210-20s100 40 125-10" fill="none" stroke="#ff3048" stroke-width="2" opacity=".35"/>
+ <g fill="#ff5366"><circle cx="90" cy="135" r="4"/><circle cx="140" cy="103" r="4"/><circle cx="194" cy="115" r="4"/><circle cx="244" cy="157" r="4"/><circle cx="300" cy="145" r="4"/></g>
+ <text x="24" y="232" fill="#ff5366" font-family="monospace" font-size="12" letter-spacing="3">SECURITY RESEARCH / LABS</text>
+</g>
+</svg>

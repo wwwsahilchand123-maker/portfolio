@@ -264,7 +264,7 @@
           '<header class="skill-card__head">' +
           '<span class="skill-card__icon"><i class="' + esc(cat.icon || "fa-solid fa-shield-halved") +
           '" aria-hidden="true"></i></span>' +
-          "<h3>" + esc(pick(cat.name, cat.title) || "") + "</h3></header>" +
+          "<h3>" + esc(pick(cat.name, cat.title, cat.category) || "") + "</h3></header>" +
           '<ul class="skill-list">' + items + "</ul></article>";
       })
       .join("");
@@ -277,10 +277,16 @@
       .map(function (p, i) {
         const name = p.name || "Untitled project";
         const tags = arr(p.tech || p.technologies).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("");
+        const spriteIndex = Number.isInteger(Number(p.spriteIndex)) ? Math.max(0, Math.min(7, Number(p.spriteIndex))) : i;
+        const spriteColumn = spriteIndex % 4;
+        const spriteRow = Math.floor(spriteIndex / 4);
+        const spritePosition = (spriteColumn * 100 / 3) + "% " + (spriteRow * 100) + "%";
         const thumb = hasValue(p.thumbnail)
-          ? '<img src="' + esc(p.thumbnail) + '" alt="' + esc(name) +
-            ' preview" loading="lazy" decoding="async" width="800" height="500">'
-          : "";
+          ? '<div class="project-card__art" role="img" aria-label="' + esc(name) +
+            ' illustrative project artwork" style="background-image:url(\'' + esc(p.thumbnail) +
+            '\');background-position:' + spritePosition + '"></div>'
+          : '<div class="project-card__art project-card__art--fallback" role="img" aria-label="' +
+            esc(name) + ' project artwork unavailable"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>';
         const github = isUsableUrl(p.github)
           ? '<a class="btn btn--ghost btn--sm" href="' + esc(p.github) +
             '" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for ' + esc(name) +
@@ -336,15 +342,19 @@
           : '<div class="cert-card__media"><div class="cert-card__icon" aria-hidden="true"><i class="' +
             CERT_ICON + '"></i></div></div>';
         const meta = [c.issuer, c.date].filter(hasValue).join(" \u00B7 ");
+        const certificateNumber = hasValue(c.certificateNumber)
+          ? '<p class="cert-card__id">Certificate no. ' + esc(c.certificateNumber) + '</p>'
+          : "";
         const link = isUsableUrl(verify)
           ? '<a class="text-link" href="' + esc(verify) + '" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: ' +
-            esc(title) + '">Verify credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>'
+            esc(title) + '">Open verification portal <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>'
           : "";
         return '<article class="cert-card reveal" data-category="' + esc(c.category) + '">' + media +
           '<div class="cert-card__body">' +
           '<span class="cert-card__cat">' + esc(c.category || "") + "</span>" +
           "<h3>" + esc(title) + "</h3>" +
           (meta ? '<p class="cert-card__meta">' + esc(meta) + "</p>" : "") +
+          certificateNumber +
           (hasValue(c.description) ? '<p class="cert-card__desc">' + esc(c.description) + "</p>" : "") +
           '<div class="cert-card__links">' + link + "</div></div></article>";
       })

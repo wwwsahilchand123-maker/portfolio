@@ -46,7 +46,7 @@ const portfolioData = {
     primaryCtaLabel: "Explore My Work",
     secondaryCtaLabel: "Let's Connect",
     /* Decorative floating cards around the hero illustration. */
-    floatingCards: [
+    floatCards: [
       { label: "Focus", value: "Network Security", icon: "fa-solid fa-network-wired" },
       { label: "Practice", value: "Penetration Testing", icon: "fa-solid fa-user-secret" },
       { label: "Mindset", value: "Defend • Detect • Respond", icon: "fa-solid fa-shield-halved" }
@@ -120,7 +120,8 @@ const portfolioData = {
       name: "Advanced Network IDS",
       category: "Network Security",
       description: "Network monitoring and intrusion detection with packet and flow analysis, detection logic, event correlation, risk scoring, and SOC-style visualization.",
-      thumbnail: "assets/projects/Advanced-Network-IDS.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 0,
       tech: ['Python', 'FastAPI', 'Scapy', 'React'],
       github: "https://github.com/wwwsahilchand123-maker/Advanced-Network-IDS",
       liveDemo: ""
@@ -129,7 +130,8 @@ const portfolioData = {
       name: "SentinelFlow SOAR",
       category: "Security Automation",
       description: "Security orchestration concept for incident workflows, threat intelligence, approvals, automated playbooks, and audit trails.",
-      thumbnail: "assets/projects/SentinelFlow-SOAR.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 1,
       tech: ['FastAPI', 'React', 'PostgreSQL', 'Docker'],
       github: "https://github.com/wwwsahilchand123-maker/SentinelFlow-SOAR",
       liveDemo: ""
@@ -138,7 +140,8 @@ const portfolioData = {
       name: "NEXA AI",
       category: "AI & Automation",
       description: "Windows-focused AI-agent foundation with memory, file intelligence, browser automation, and permission-aware tools.",
-      thumbnail: "assets/projects/Nexa-Ai-like-jarvis.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 2,
       tech: ['Python', 'FastAPI', 'Electron', 'React'],
       github: "https://github.com/wwwsahilchand123-maker/Nexa-Ai-like-jarvis",
       liveDemo: ""
@@ -147,7 +150,8 @@ const portfolioData = {
       name: "SecureLearn Cyber Lab",
       category: "Security Training",
       description: "Cybersecurity learning platform combining phishing analysis, ML classification, awareness simulations, and security quizzes.",
-      thumbnail: "assets/projects/SecureLearn-Cyber-Lab.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 3,
       tech: ['Python', 'Flask', 'Machine Learning', 'SQLite'],
       github: "https://github.com/wwwsahilchand123-maker/SecureLearn-Cyber-Lab",
       liveDemo: ""
@@ -156,7 +160,8 @@ const portfolioData = {
       name: "PackIntel-AI",
       category: "AI & Research",
       description: "AI-assisted recommendation system for food-packaging material selection using retrieval and explainable scoring.",
-      thumbnail: "assets/projects/PackIntel-AI.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 4,
       tech: ['Python', 'FastAPI', 'RAG', 'AI'],
       github: "https://github.com/wwwsahilchand123-maker/PackIntel-AI",
       liveDemo: ""
@@ -165,7 +170,8 @@ const portfolioData = {
       name: "AES Encryption Project",
       category: "Cryptography",
       description: "Desktop cryptography learning project exploring AES-based file protection workflows.",
-      thumbnail: "assets/projects/AES-Encryption-Project.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 5,
       tech: ['Python', 'AES', 'Tkinter', 'PyCryptodome'],
       github: "https://github.com/wwwsahilchand123-maker/AES-Encryption-Project",
       liveDemo: ""
@@ -174,7 +180,8 @@ const portfolioData = {
       name: "WeatherNova",
       category: "Web Development",
       description: "Animated, responsive weather dashboard with live conditions, forecasts, air quality, maps, and smart insights.",
-      thumbnail: "assets/projects/weather-report-project-.jpg",
+      thumbnail: "assets/projects/project-montage.svg",
+      spriteIndex: 6,
       tech: ['HTML', 'CSS', 'JavaScript', 'Open-Meteo'],
       github: "https://github.com/wwwsahilchand123-maker/weather-report-project-",
       liveDemo: ""
@@ -204,8 +211,24 @@ const portfolioData = {
     "Workshop & Events"
   ],
   certifications: [
-    { title: "Programming in Python", category: "Certification" },
-    { title: "Ethical Hacking in AI", category: "Certification" }
+    {
+      title: "Programming with Python",
+      category: "Training",
+      issuer: "Internshala Trainings",
+      date: "2023-08-02",
+      certificateNumber: "1uqclpj4aak",
+      verifyUrl: "https://trainings.internshala.com/verify_certificate",
+      description: "6-week online training covering Python fundamentals, variables, object-oriented programming, SQLite, PyQt GUI development, and a final project. Certificate notes top-performer status."
+    },
+    {
+      title: "Ethical Hacking with AI",
+      category: "Training",
+      issuer: "Internshala Trainings · IITM Pravartak",
+      date: "2025-08-26",
+      certificateNumber: "38asi6tofay",
+      verifyUrl: "https://trainings.internshala.com/verify_certificate",
+      description: "8-week online training covering information security, networking, web development, OWASP Top 10 VAPT, VAPT automation, and vulnerability reporting. Certificate notes top-performer status."
+    }
   ],
 
   /* ---------- 9. EXPERIENCE / LEARNING JOURNEY ---------- */
