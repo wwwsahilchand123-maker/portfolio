@@ -299,7 +299,6 @@
           : "";
         return '<article class="project-card spotlight reveal" aria-labelledby="project-title-' + i + '">' +
           '<div class="project-card__media">' + thumb +
-          '<div class="media-fallback" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>' +
           '<span class="project-card__category">' + esc(p.category || "Project") + "</span></div>" +
           '<div class="project-card__body">' +
           '<h3 class="project-card__title" id="project-title-' + i + '">' + esc(name) + "</h3>" +
