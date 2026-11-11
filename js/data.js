@@ -217,6 +217,7 @@ const portfolioData = {
       issuer: "Internshala Trainings",
       date: "2023-08-02",
       certificateNumber: "1uqclpj4aak",
+      image: "assets/certificates/programming-with-python.png",
       verifyUrl: "https://trainings.internshala.com/verify_certificate",
       description: "6-week online training covering Python fundamentals, variables, object-oriented programming, SQLite, PyQt GUI development, and a final project. Certificate notes top-performer status."
     },
@@ -226,6 +227,7 @@ const portfolioData = {
       issuer: "Internshala Trainings · IITM Pravartak",
       date: "2025-08-26",
       certificateNumber: "38asi6tofay",
+      image: "assets/certificates/ethical-hacking-with-ai.png",
       verifyUrl: "https://trainings.internshala.com/verify_certificate",
       description: "8-week online training covering information security, networking, web development, OWASP Top 10 VAPT, VAPT automation, and vulnerability reporting. Certificate notes top-performer status."
     }

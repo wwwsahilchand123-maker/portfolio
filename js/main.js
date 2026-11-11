@@ -337,8 +337,10 @@
         const verify = pick(c.verifyUrl, c.url);
         const title = c.title || c.name || "Untitled";
         const media = hasValue(c.image)
-          ? '<div class="cert-card__media"><img src="' + esc(c.image) + '" alt="' + esc(title) +
-            ' certificate" loading="lazy" decoding="async" width="800" height="560">' + fallback + "</div>"
+          ? '<div class="cert-card__media"><a class="cert-card__preview" href="' + esc(c.image) +
+            '" target="_blank" rel="noopener noreferrer" aria-label="View full certificate: ' + esc(title) +
+            '"><img src="' + esc(c.image) + '" alt="' + esc(title) +
+            ' certificate preview" loading="lazy" decoding="async" width="800" height="560"></a>' + fallback + "</div>"
           : '<div class="cert-card__media"><div class="cert-card__icon" aria-hidden="true"><i class="' +
             CERT_ICON + '"></i></div></div>';
         const meta = [c.issuer, c.date].filter(hasValue).join(" \u00B7 ");

@@ -980,7 +980,25 @@ img.is-missing { display: none; }
   aspect-ratio: 4 / 3;
   background: var(--bg-tertiary);
 }
-.cert-card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cert-card__preview {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.cert-card__preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.65rem;
+  object-fit: contain;
+  transition: transform 0.3s var(--ease);
+}
+.cert-card__preview:hover img,
+.cert-card__preview:focus-visible img { transform: scale(1.025); }
+.cert-card__media .media-fallback { display: none; }
+.cert-card__media:has(img.is-missing) .media-fallback { display: grid; }
 .cert-card__icon {
   display: grid;
   place-items: center;
