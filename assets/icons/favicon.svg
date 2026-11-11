@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cybersecurity shield">
+  <rect width="64" height="64" rx="14" fill="#080808"/>
+  <path d="M32 12 48 18v13c0 10-6 17-16 21-10-4-16-11-16-21V18z" fill="none" stroke="#E50920" stroke-width="3"/>
+  <path d="m25 32 5 5 10-11" fill="none" stroke="#FF263D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
