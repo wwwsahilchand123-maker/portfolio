@@ -350,6 +350,12 @@
           ? '<a class="text-link" href="' + esc(verify) + '" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: ' +
             esc(title) + '">Open verification portal <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>'
           : "";
+        const pdfLinks = isUsable(c.pdf)
+          ? '<a class="text-link" href="' + esc(c.pdf) + '" target="_blank" rel="noopener noreferrer" aria-label="View certificate PDF: ' +
+            esc(title) + '">View PDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>' +
+            '<a class="text-link" href="' + esc(c.pdf) + '" download aria-label="Download certificate PDF: ' +
+            esc(title) + '">Download PDF <i class="fa-solid fa-download" aria-hidden="true"></i></a>'
+          : "";
         return '<article class="cert-card reveal" data-category="' + esc(c.category) + '">' + media +
           '<div class="cert-card__body">' +
           '<span class="cert-card__cat">' + esc(c.category || "") + "</span>" +
@@ -357,7 +363,7 @@
           (meta ? '<p class="cert-card__meta">' + esc(meta) + "</p>" : "") +
           certificateNumber +
           (hasValue(c.description) ? '<p class="cert-card__desc">' + esc(c.description) + "</p>" : "") +
-          '<div class="cert-card__links">' + link + "</div></div></article>";
+          '<div class="cert-card__links">' + link + pdfLinks + "</div></div></article>";
       })
       .join("");
 

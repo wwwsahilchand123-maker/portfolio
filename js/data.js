@@ -231,6 +231,15 @@ const portfolioData = {
       verifyUrl: "https://trainings.internshala.com/verify_certificate",
       description: "8-week online training covering information security, networking, web development, OWASP Top 10 VAPT, VAPT automation, and vulnerability reporting. Certificate notes top-performer status."
     }
+    },
+    {
+      title: "Teach teens computing: Computer networks",
+      category: "Training",
+      issuer: "Raspberry Pi Foundation",
+      date: "2026-11-22",
+      pdf: "assets/certificates/teach-teens-computing-computer-networks.pdf",
+      description: "Signed by Rachel Arthur, Chief Learning Officer."
+    }
   ],
 
   /* ---------- 9. EXPERIENCE / LEARNING JOURNEY ---------- */
