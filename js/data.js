@@ -230,7 +230,6 @@ const portfolioData = {
       image: "assets/certificates/ethical-hacking-with-ai.png",
       verifyUrl: "https://trainings.internshala.com/verify_certificate",
       description: "8-week online training covering information security, networking, web development, OWASP Top 10 VAPT, VAPT automation, and vulnerability reporting. Certificate notes top-performer status."
-    }
     },
     {
       title: "Teach teens computing: Computer networks",
