@@ -350,7 +350,7 @@
           ? '<a class="text-link" href="' + esc(verify) + '" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: ' +
             esc(title) + '">Open verification portal <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>'
           : "";
-        const pdfLinks = isUsable(c.pdf)
+        const pdfLinks = isUsable(c.pdf) && !hasValue(c.image)
           ? '<a class="text-link" href="' + esc(c.pdf) + '" target="_blank" rel="noopener noreferrer" aria-label="View certificate PDF: ' +
             esc(title) + '">View PDF <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>' +
             '<a class="text-link" href="' + esc(c.pdf) + '" download aria-label="Download certificate PDF: ' +
