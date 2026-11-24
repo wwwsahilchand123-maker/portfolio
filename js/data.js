@@ -236,7 +236,7 @@ const portfolioData = {
       category: "Training",
       issuer: "Raspberry Pi Foundation",
       date: "2026-11-22",
-      image: "assets/certificates/teach-teens-computing-computer-networks.png",
+      image: "assets/certificates/teach-teens-computing-computer-networks.png?v=20261124-2",
       pdf: "assets/certificates/teach-teens-computing-computer-networks.pdf",
       description: "Signed by Rachel Arthur, Chief Learning Officer."
     },
@@ -245,7 +245,7 @@ const portfolioData = {
       category: "Training",
       issuer: "Raspberry Pi Foundation",
       date: "2026-11-24",
-      image: "assets/certificates/introducing-ai-certificate.png",
+      image: "assets/certificates/introducing-ai-certificate.png?v=20261124-2",
       pdf: "assets/certificates/introducing-ai-certificate.pdf",
       description: "Certificate of completion, signed by Rachel Arthur, Chief Learning Officer."
     }
