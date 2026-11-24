@@ -238,6 +238,14 @@ const portfolioData = {
       date: "2026-11-22",
       pdf: "assets/certificates/teach-teens-computing-computer-networks.pdf",
       description: "Signed by Rachel Arthur, Chief Learning Officer."
+    },
+    {
+      title: "Introducing AI",
+      category: "Training",
+      issuer: "Raspberry Pi Foundation",
+      date: "2026-11-24",
+      pdf: "assets/certificates/introducing-ai-certificate.pdf",
+      description: "Certificate of completion, signed by Rachel Arthur, Chief Learning Officer."
     }
   ],
 
